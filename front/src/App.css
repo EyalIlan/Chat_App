@@ -1,0 +1,336 @@
+
+
+
+
+*{
+  padding: 0;
+  margin: 0;
+  /* box-sizing: border-box; */
+}
+
+/* h1,h2,h3,h4,h5,h6,p{
+  margin-bottom:   20px 0;
+  padding: 0;
+} */
+
+p{
+  margin:  0;
+  padding: 0;
+}
+
+
+a{
+  font-style: normal;
+}
+
+input{
+  outline: none;
+}
+
+hr{
+ margin: 0;
+}
+
+.App{
+  color: white;
+  /* text-align: center; */
+  position: relative;
+  height: 100vh;
+  background-color: rgb(0, 0, 0);
+  opacity: 0.9;
+  overflow: hidden;
+}
+
+.App::before{
+  /* background-color: black; */
+  content: '';
+  background-image: url('/public/images/pokemonBG1.jpg');
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.4;
+  z-index: -1;
+}
+/* ydw01kttqs */
+
+.scroll{
+  /* max-height: 500px; */
+  overflow: auto;
+}
+
+::-webkit-scrollbar{
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: white;
+}
+
+.title{
+  text-align: center;
+  font-size: 25px;
+}
+
+.chat_form{
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+}
+.chat_form div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  /* background-color: blue; */
+  height: 400px;
+  width: 400px;
+  /* background-color: red; */
+  border-radius: 20px;
+}
+
+
+/* 
+.chat_form input{
+  padding: 10px;
+  font-size: 20px;
+  color:rgb(0, 102, 254) ;
+  border: 5px solid rgb(0, 102, 254);
+}
+
+
+.chat_form input::placeholder{
+  color: rgb(0, 102, 254);
+} */
+
+.responsive{
+  display: flex;
+}
+.flex{
+  display: flex;
+}
+
+
+
+.flex_1{
+  flex: 1;
+  flex-wrap: wrap;
+}
+
+.between{
+  justify-content: space-between;
+}
+
+.around{
+  justify-content: space-around;
+}
+
+
+.center{
+  align-items: center;
+}
+
+.grid{
+  display: grid;
+  grid-gap: 0.3rem;
+}
+.grid_3{
+  grid-template-columns: repeat(3,1fr);
+}
+
+
+.menu_max_height{
+  max-height: 80vh;
+}
+
+.btn_web{
+  cursor: pointer;
+  background-color: rgb(0, 102, 254);
+  color: white;
+  /* width: 200px; */
+  border: 2px solid rgb(132, 132, 132);
+  font-size: 20px;
+  padding: 15px;
+}
+.btn_web:hover{
+  background-color:rgb(6, 68, 160) ;
+}
+.btn_web:active{
+  background-color:rgb(3, 49, 118) ;
+}
+
+
+.btn_transperant{
+  background-color: transparent;
+}
+
+/* HR */
+.box_line{
+  height: 3px;
+  margin: 3px 0;
+}
+
+
+/* TEXT */
+
+.medium_text{
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/* COLORS */
+
+
+
+/* Animations */
+
+/* max-height for scroll */
+
+.mh_400{
+  max-height: 300px;
+  max-width: 300px;
+}
+
+
+
+
+.screen{
+  height: 100vh;
+  /* background-color: red; */
+  /* display: flex; */
+  /* align-items: center;
+  justify-content: center; */
+  /* border-radius: 20px; */
+  /* border-radius: 20px; */
+}
+
+
+/* Cleaning to responsive */
+
+
+.form{
+  /* align-items: center; */
+  box-shadow: 5px 10px black;
+  min-height: 350px;
+ 
+  border: 1px solid black;
+  position: relative;
+}
+
+.form_padding{
+  padding: 20px 50px;
+}
+
+
+
+#form_image{
+
+ height: 500px; 
+ width: 500px;
+}
+
+.form::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  opacity: 0.8;
+  background-color: blue;
+}
+
+.form input{
+  margin: 7px 0;
+  /* border-radius: 5px; */
+  /* padding: 0 15px; */
+  /* color: blue; */
+}
+
+.form h1,.form h2,.form h3,.form h4,.form h5,.form h6{
+  margin-bottom: 20px;
+}
+
+/* Size */
+
+.mainTitle{
+  font-size: 45px;
+}
+
+
+
+.medium_text{
+  font-size: 18px;
+}
+
+
+
+
+/*  */
+
+.spacing{
+  margin: 20px 0;
+}
+
+.pad{
+  margin: 0 15px;
+}
+
+.form h1{
+  text-align: center;
+}
+
+
+
+.form_input{
+  color: white;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid white;
+}
+
+.form input{
+  width: 100%;
+  font-size: 18px;
+}
+
+
+
+@media(max-width:1000px){
+  .responsive_hidden{
+    display: none;
+  }
+  
+.responsive{
+  display: block;
+}
+
+.form{
+  /* align-items: center; */
+  box-shadow: 2px 5px black;
+  /* text-align: center; */
+  max-height: 100vh;
+  height: 100vh;
+  width: 100vw;
+  border: 1px solid black;
+  position: relative;
+  overflow: auto;
+  background-color: blue;
+}
+
+.form_padding{
+   padding: 20px 28px;
+}
+
+#form_image{
+  width: 200px;
+  height: 200px;
+}
+
+
+}

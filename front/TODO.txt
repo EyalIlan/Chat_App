@@ -1,0 +1,26 @@
+
+//get the last message,date and text from that specif user or group to show up in the user_box
+//get the data of the user from the server to display in user_box name,avatar
+
+
+//get a defualt main chat page when not a room selected
+
+
+//User//
+
+//build update user page
+//build create user page
+
+
+// user_box 
+when title or paragragh goes to big  replace the text with ...
+
+
+
+// Project flow 
+-> when the user first enter to its account all the rooms the user in will show on the sidebar
+-> A user can enter a group from the sidebar by clicking it 
+-> when a group is chosen all room messages will show on the content side and the users of the group will show on the detail bar 
+above and a event will emit to join that specific room
+
+

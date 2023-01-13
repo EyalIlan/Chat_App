@@ -1,0 +1,19 @@
+.box{
+    padding: 20px 30px;
+}
+
+.box_avatar_image{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.openMenu{
+    animation-name: openMenu;
+    animation-duration: 1s;
+}
+
+.xyx{
+z-index: 1000;
+}

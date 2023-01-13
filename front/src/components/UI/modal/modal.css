@@ -1,0 +1,27 @@
+
+.Modal{
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+}
+
+#modal{
+    min-width: 50vw;
+    min-height: 400px;
+    max-height: 500px;
+}
+
+.Modal::before{
+    content: '';
+    background-color: rgb(20, 20, 20);
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}

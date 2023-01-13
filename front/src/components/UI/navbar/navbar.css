@@ -1,0 +1,54 @@
+
+#navbar{
+    /* min-height: 18vh; */
+    overflow: hidden;
+    /* padding: 10px; */
+}
+
+#navbar .container,#navbar .row{
+    height: 100%;
+}
+
+.logo{
+    height: 40px;
+    width: 40px;
+    font-size:30px;
+}
+
+.logo_cdn{
+    margin: 0 15px;
+    font-size:25px;
+}
+
+.avatar{
+    border-radius: 50%;
+    height:60px;
+    width: 60px;
+    /* padding: 0 20px; */
+    margin: 0 20px;
+}
+
+
+
+
+.border_right{
+    border-right: 1px solid rgb(214, 189, 189);
+}
+
+.click{
+    cursor: pointer;
+}
+
+
+/* state change the max width of the name that will be display */
+
+.navbar_icons{
+    padding: 10px;
+}
+
+
+@media(min-width:1000px) {
+    
+
+
+}
