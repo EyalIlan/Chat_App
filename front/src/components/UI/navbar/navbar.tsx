@@ -59,7 +59,7 @@ const Navbar: React.FC<Props> = (props) => {
                                         <div>
                                             <i className="fa-solid fa-ellipsis-vertical logo_cdn click" onClick={() => { SideMeunHandler('detail') }}></i>
                                             <i className="fa-solid fa-magnifying-glass logo_cdn click" onClick={() => { SideMeunHandler('search') }}></i>
-                                            <i className="fa-solid fa-user logo_cdn click" onClick={() => { dispatch(changeScreenPhone('users')) }} ></i>
+                                            <i className="fa-sharp fa-solid fa-people-group logo_cdn click" onClick={() => { dispatch(changeScreenPhone('users')) }} ></i>
                                         </div>
 
                                     </div>
@@ -100,7 +100,7 @@ const Navbar: React.FC<Props> = (props) => {
                             <div>
                                 <i className="fa-solid fa-ellipsis-vertical logo_cdn click"></i>
                                 <i className="fa-brands fa-rocketchat logo_cdn click" onClick={() => navigate('/newroom')}></i>
-                                {/* <img src="images/charmander.png" alt="" className='logo click' /> */}
+                                <i className="fa-solid fa-user logo_cdn click"  id='user_profile' onClick={() =>{navigate('/user_profile')}}></i>
                             </div>
 
                             <div className='flex center'>
