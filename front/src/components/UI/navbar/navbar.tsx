@@ -4,6 +4,8 @@ import { useSelector, useDispatch } from 'react-redux'
 import { UserData } from '../../../util/store/reducers/user'
 import { RoomInfo, RoomUsers } from '../../../util/store/reducers/room'
 import { SidemenuChange, SidemenuType, Showmenu, PhoneScreen, changeScreenPhone } from '../../../util/store/reducers/feature'
+import { saveToken,Token } from '../../../util/store/reducers/user'
+import   Axios  from  '../../../util/Axios/axios'
 import { useNavigate } from 'react-router'
 
 type Props = {
@@ -16,21 +18,33 @@ const Navbar: React.FC<Props> = (props) => {
     const room = useSelector(RoomInfo)
     const roomUsers = useSelector(RoomUsers)
     const phoneScreen = useSelector(PhoneScreen)
+    const token = useSelector(Token)
 
     const showmenu = useSelector(Showmenu)
     const navigate = useNavigate()
     const dispatch = useDispatch()
 
+    // FUNCTIONS
     const SideMeunHandler = (type: string) => {
         dispatch(changeScreenPhone('menu'))
         dispatch(SidemenuChange(true))
         dispatch(SidemenuType(type))
     }
+    
     const closeMenuHandelr = () => {
         dispatch(changeScreenPhone('chat'))
         dispatch(SidemenuChange(false))
     }
-
+    const LogoutHandler = async() =>{
+        try{
+            await Axios.post('/logoutAll',{},{ headers: { 'Authorization': `Bearer ${token}`}})
+            dispatch(saveToken(''))
+            navigate('/')
+        }
+        catch(e){
+            console.log(e);
+        }
+    }
 
     return (
         <div>
@@ -98,7 +112,7 @@ const Navbar: React.FC<Props> = (props) => {
 
 
                             <div>
-                                <i className="fa-solid fa-ellipsis-vertical logo_cdn click"></i>
+                                <i className="fa-sharp fa-solid fa-door-open  logo_cdn click" onClick={LogoutHandler}></i>
                                 <i className="fa-brands fa-rocketchat logo_cdn click" onClick={() => navigate('/newroom')}></i>
                                 <i className="fa-solid fa-user logo_cdn click"  id='user_profile' onClick={() =>{navigate('/user_profile')}}></i>
                             </div>
