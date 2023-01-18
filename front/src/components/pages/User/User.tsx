@@ -2,7 +2,7 @@ import React,{useState,useEffect} from 'react'
 import { useNavigate } from 'react-router'
 import  Axios  from '../../../util/Axios/axios'
 import { useDispatch,useSelector } from 'react-redux'
-import {Token,UserData} from '../../../util/store/reducers/user'
+import {Token,UserData,saveUser} from '../../../util/store/reducers/user'
 
 import './User.css'
 interface Props  {}
@@ -23,7 +23,10 @@ const User:React.FC<Props> = () => {
   const [name,SetName] = useState('')
   const [email,SetEmail] = useState('')
   const [age,SetAge] = useState(0)
-  const [requestMessage,SetRequestMessage] = useState('')
+  const [requestMessage,SetRequestMessage] = useState({
+        message:'',
+        show:false
+  })
 
 
  useEffect(() =>{
@@ -49,6 +52,9 @@ const Cancel = () =>{
     SetEmail('')
     SetAge(0)
     SetEditMode(false)
+    SetRequestMessage(prev =>{
+        return {...prev,show:false}
+    })
 }
 
 
@@ -56,13 +62,16 @@ const EditHandler = async() =>{
 
 
     try{
-        const {data} = await Axios.post('/edit',{name,email,age},{ headers: { 'Authorization': `Bearer ${token}` } })
-        SetRequestMessage(data)
+        await Axios.put('/user',{name,email,age},{ headers: { 'Authorization': `Bearer ${token}` } })
+        dispatch(saveUser({name,email,age}))
     }
     catch(e){
         console.log(e);
-        SetRequestMessage('proplem edit user')
+        SetRequestMessage( prev =>{
+            return {...prev,message:'failed edit user'}
+        })
     }
+    Cancel()
 }
 
 let edit;
@@ -97,8 +106,8 @@ let edit;
              <div className='text_center'>
                 <img src={`${user.image?user.image:'/images/avatarImage.png'}`} alt="" />
              </div>
-             <h5>name:{user.name}</h5>
-             <h5>email:{user.email}</h5>
+             <h5>name: {user.name}</h5>
+             <h5>email: {user.email}</h5>
              <h5>age: {user.age}</h5>
              <div className='text_center'>
                 <button className='btn btn-primary' onClick={() =>{SetEditMode(true)}}>Edit Mode</button>
@@ -107,9 +116,20 @@ let edit;
     )
  }
 
+
+
   return (
     <div className='screen user_page'>
         <div className='form form_padding'>
+            
+            
+           {requestMessage.show? <div className='p-3 mb-2 bg-danger text-white'>
+                  <p>
+                    {requestMessage.message}
+                  </p>
+            </div>
+            :''}
+
              {edit}
         </div>
     </div>

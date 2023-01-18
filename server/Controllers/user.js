@@ -47,7 +47,7 @@ const SaveNewUser = async(req,res) =>{
 }
 
 const UpdateUser = async(req,res) =>{
-    
+    console.log('in update user');
     try{
     const user = req.user
 
