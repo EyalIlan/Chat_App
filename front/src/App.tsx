@@ -21,11 +21,11 @@ function App() {
           //
 
           {/* <Route path='/' element={<Login/>}></Route> */}
-          {/* <Route path='/' element={<Login title='Login'/>}></Route> */}
+          <Route path='/' element={<Login title='Login'/>}></Route>
           <Route path='/chat' element={<Chat socket ={socket}/>}></Route>
           <Route path='/signup' element={<Login title='Sign up' signup={"user"}/>}></Route>
           <Route path='/newroom' element={<Login title='New Room' signup={"room"}/>}></Route>
-          <Route path='/' element={<User />}></Route>
+          <Route path='/user_profile' element={<User />}></Route>
           <Route path='/*' element={<Page404 />}></Route>
       </Routes>
     </div>
