@@ -2,7 +2,7 @@ import Axios from 'axios'
 
 
 const instance = Axios.create({
-    baseURL: 'http://localhost:5000',
+    baseURL: 'https://chat1-lyze.onrender.com',
 });
 
 export default instance
