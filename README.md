@@ -11,7 +11,7 @@
 ## Signup page the user can create a new account 
 ![sign up](https://user-images.githubusercontent.com/55767736/213424910-6e9969b4-bdbd-4169-b538-2c1bcec84c07.png)
 
-##create new room page the user can select existing users to add to the group give a title and image to the group
+## create new room page the user can select existing users to add to the group give a title and image to the group
 ![create new room](https://user-images.githubusercontent.com/55767736/213425217-3c61e83a-a9bb-489c-98f9-34d46c6d2ca5.png)
 
 ## the main screen the chat page the user can look on existing rooms and select the room he want to connect to 
