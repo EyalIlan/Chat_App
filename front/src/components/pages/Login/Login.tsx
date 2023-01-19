@@ -185,7 +185,7 @@ const Login: React.FC<Props> = ({ title, signup }) => {
           }
           <div className='responsive flex-column justify-content-around flex_1'>
             <h1 className='mainTitle'>{title}</h1>
-
+          
 
             {
               signup === "room" ?
