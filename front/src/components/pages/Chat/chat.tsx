@@ -62,7 +62,7 @@ const Chat: React.FC<Props> = ({ socket }) => {
   useEffect(() => {
 
     if (!token) {
-      // navigate('/')
+      navigate('/')
     }
 
     const request = async () => {

@@ -16,7 +16,7 @@
 }
 
 .logo_cdn{
-    margin: 0 15px;
+    margin: 0 10px;
     font-size:25px;
 }
 
@@ -46,9 +46,13 @@
     padding: 10px;
 }
 
+.phone_screen_only{
+    display: none;
+}
 
-@media(min-width:1000px) {
+@media(max-width:1000px) {
     
-
-
+    .phone_screen_only{
+        display:initial
+    }
 }

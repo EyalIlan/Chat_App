@@ -44,7 +44,7 @@ hr{
 .App::before{
   /* background-color: black; */
   content: '';
-  background-image: url('/public/images/pokemonBG1.jpg');
+  background-image: url('/public/images/chatBG.jpg');
   position: absolute;
   top: 0;
   left: 0;
@@ -56,6 +56,11 @@ hr{
   opacity: 0.4;
   z-index: -1;
 }
+
+
+
+/* 0 10px */
+
 /* ydw01kttqs */
 
 .scroll{

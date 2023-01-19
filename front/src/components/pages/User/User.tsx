@@ -32,7 +32,7 @@ const User:React.FC<Props> = () => {
  useEffect(() =>{
 
     if(!token){
-        // navigate('/')
+        navigate('/')
     }
 
 

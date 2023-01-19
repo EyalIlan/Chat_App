@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 import { useSelector,useDispatch } from 'react-redux'
 import { sideMenuType } from '../../../util/store/reducers/feature'
-import { RoomMessages,RoomUsers,RoomInfo,saveRoomUsers } from '../../../util/store/reducers/room'
+import { RoomMessages,RoomUsers,RoomInfo } from '../../../util/store/reducers/room'
 import { showModal,ChangeModalShowing } from '../../../util/store/reducers/feature'
 import { Token } from '../../../util/store/reducers/user'
 import { MessageIF } from '../../../util/interface/interface'
@@ -51,7 +51,7 @@ const SideMenu: React.FC<Props> = ({ MenuType }) => {
     
     const getAllGroupUsersHandler = async () =>{
         
-        await Axios.get(`/room/allusers/${room._id}`, { headers: { 'Authorization': `Bearer ${token}`}})
+        // await Axios.get(`/room/allusers/${room._id}`, { headers: { 'Authorization': `Bearer ${token}`}})
         
         // dispatch(saveRoomUsers(request.data.users))
         
@@ -142,8 +142,8 @@ const SideMenu: React.FC<Props> = ({ MenuType }) => {
         </div>
 
         <div className='box flex justify-content-center'>
-            <button className='btn btn-primary' onClick={getAllGroupUsersHandler}>show all users</button>
-            <button className='btn btn-danger' onClick={ExitGroupHandler}>Quit from group</button>
+            <button className='btn btn-primary' onClick={getAllGroupUsersHandler}>show all group users</button>
+            {/* <button className='btn btn-danger' onClick={ExitGroupHandler}>Quit from group</button> */}
 
         </div>
         </div>  
